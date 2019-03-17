@@ -43,7 +43,10 @@ class TableWriter(object):
 
             with TableWriter(...) as html:
                 with html.Table([list of headers], other parameters) as tab:
-                    tab.row([list of row elements])
+                    tab.row([list of row elements for row 1])
+                       :
+                    tab.row([list of row elements for row n])
+
         """
         def __init__(self, table_headers, align=["left"], hcolors=None):
             """ Initializes a table

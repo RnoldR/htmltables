@@ -1,10 +1,10 @@
 #TableMarkup#
 This package makes is easy to create HTML files containing tables with images. I created it because I needed a way to log experiments in table form, often with pictures. 
 
-To create a `table_markup` file:
+To create a `htmltables` file:
 
 ~~~python
-	from table_markup import TableWriter
+	from htmltables import TableWriter
 	
 	    with TableWriter(log_name) as logfile:
 	    # Create tables, images and text via logfile
@@ -29,7 +29,7 @@ To create a `table_markup` file:
 		    tab.row(['Validation samples', n_val])
 ~~~
 
-Images can be inserted in two ways: via lionks and embedded.
+Images can be inserted in two ways: via links and embedded.
 
 ###links###
 Just add an HTML link to an image in the text, for example in the table row.

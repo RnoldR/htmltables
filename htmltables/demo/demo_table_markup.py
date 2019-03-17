@@ -31,12 +31,12 @@ if __name__ == "__main__":
     image.close()
 
     with TableWriter ("table.html") as html:
-        html.p('Writing a table the simple way')
-
-        html.p('Without header colors')
+        html.p('The same table printed in different ways')
+        html.p('Standard header colors (black text on white background) '
+               'Table yellow letters on red background')
         with html.Table(['i', 'i^2', 'i^3'], align=['left', 'right']) as tab:
             colors = ['red', 'yellow']
-            html.p('Using tab.stripe(' + str(colors) + ')')
+            html.p('Using alt(' + str(colors) + ')')
             for i in range (0, 11):
                 tab.alt(colors).row([i, i**2, i**3])
 
@@ -44,21 +44,21 @@ if __name__ == "__main__":
         with html.Table(['i', 'i^2', 'i^3'], align=['left', 'right'],
                         hcolors=['yellow', 'teal']) as tab:
             colors = ['red', 'yellow']
-            html.p('Using tab.stripe(' + str(colors) + ')')
+            html.p('Using alt(' + str(colors) + ')')
             for i in range (0, 11):
                 tab.alt(colors).row([i, i**2, i**3])
 
         with html.Table(['i', 'i^2', 'i^3'], align=['left', 'right'],
                         hcolors=['yellow', 'teal']) as tab:
             colors = ['white', 'black', 'silver']
-            html.p('Using tab.stripe(' + str(colors) + ')')
+            html.p('Using alt(' + str(colors) + ')')
             for i in range (0, 11):
                 tab.alt(colors).row([i, i**2, i**3])
 
         with html.Table(['i', 'i^2', 'i^3'], align=['left', 'right'],
                         hcolors=['yellow', 'teal']) as tab:
             colors = ['red', 'yellow', 'blue', 'aqua']
-            html.p('Using tab.stripe(' + str(colors) + ')')
+            html.p('Using stripe(' + str(colors) + ')')
             for i in range (0, 11):
                 tab.alt(colors).row([i, i**2, i**3])
 
